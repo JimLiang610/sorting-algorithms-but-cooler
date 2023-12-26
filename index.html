@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>SortingIsAwesome</title>
+        <link rel="stylesheet" href="style.css">
+        
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.2/font/bootstrap-icons.min.css">
+        <script src="events.js"></script>
+    </head>
+    <body>
+        <!--Website Header-->
+        <div id="siteHeader">
+            <header>
+                <h1>Sorting Visualizer</h1>
+            </header>
+            <nav> 
+                <ul>
+                    <li><a href="#" id="bubbleSort">Bubble Sort</a></li>
+                    <li><a href="#" id="selectionSort">Selection Sort</a></li>
+                    <li><a href="#" id="mergeSort">Merge Sort</a></li>
+                </ul>  
+            </nav>
+        </div>
+        <!--Sorting Visualizer-->
+        <main>
+            <!--use of divs is to apply different styles to some content that we dont want for other content-->
+            <div id="algorithmDescription">Pick an algorithm above and visualize it!</div>
+
+            <div class="start">
+                <button id="startButton">Visualize!</button>
+            </div>
+            
+            <button class="user_buttons m-4 pausePlayButton pause"  disabled>
+                <i class="bi bi-pause-fill"></i>
+            </button>
+
+            <p>Bars: <span class="barsInSlider"></span></p>
+            <div class="slidecontainer">
+                <input type="range" min="10" max="100" value="50" class="slider">
+            </div>
+        
+            <div class="barContainer"> </div>
+        </main>
+    </body>
+</html>

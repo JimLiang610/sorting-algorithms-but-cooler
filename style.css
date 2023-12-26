@@ -1,0 +1,140 @@
+header, nav {
+    color: white;
+    background-color: #0a273b;
+    text-align: center;
+    font: bold 1em sans-serif;
+}
+
+p {
+    color: black;
+    font: bold 1em sans-serif;
+}
+
+#siteHeader {
+    padding: 20px;
+    background-color: #0a273b;
+    box-shadow: 0 -1em 0 1.5em #0a273b;
+    margin: -20px 0 30px;
+}
+
+#algorithmDescription {
+    text-align: center;
+    font: 20px sans-serif;
+}
+
+.start {
+    text-align: center;
+}
+
+#startButton {
+    background-color: rgb(18, 216, 157);
+    border: none;
+    font-size: 20px;
+    padding: 1em 1em;
+    border-radius: .5em;
+    margin: 1em 0 0;
+    cursor: pointer; /*changes moouse cursor to the hand when hovering*/
+}
+
+nav {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+nav ul {
+    /*remove default bullet points of list elements li */
+    list-style-type: none;
+    display: inline-flex;
+    align-items: center;
+    justify-content: space-around;
+    flex-grow: 1;
+}
+/*remove the defualt styling of anchor tags (links) in the header*/ 
+#siteHeader a {
+    color: inherit; 
+    text-decoration: inherit; 
+}
+
+.bar {
+    background-color: grey;
+    width: 1em;
+    margin: 5px;
+    transition: height .2s;
+}
+
+.barContainer {
+    display: flex;
+    flex-direction: row;
+    justify-content: center; /*center the bars*/ 
+    align-items: flex-end; /*adjust div bars to start from the bottom and go to the top. without this declaration the bars look upside down*/
+    border: 1px solid #ccc;
+    padding-top: 1em;
+    height: 300px;
+}
+
+.comparing {
+    background-color: red; /*Overrides background color to red when added*/
+}
+
+.swapped {
+    background-color: green; /*Overrides background color to green when added*/
+}
+
+/*testing purposes*/
+.last {
+    background-color: blue;
+}
+
+.pausePlayButton {
+    font-size: 50px;
+    cursor: pointer;
+    background-color: #666161;
+    border-radius: .1em;
+    border: none;
+    transition-duration: 0.4s;
+}
+
+.pause:hover {
+    background-color: rgb(170, 25, 9);
+}
+
+.play:hover {
+    background-color: rgb(25, 216, 18);
+}
+
+/*slider styles*/ 
+
+
+.slider {
+    -webkit-appearance: none;
+    width: 25%;
+    height: 5px;
+    background: #ccc;
+    outline: none;
+    opacity: 0.6;
+    -webkit-transition: .2s;
+    transition: opacity .2s;
+} 
+
+.slider:hover {
+    opacity: 1;
+}
+
+.slider::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    /*remove platform styling of slider "thumb" so I can apply my own*/
+    appearance: none;
+    width: 10px;
+    height: 20px;
+    /*add color to make "thumb visible*/
+    background: #0a273b;
+    cursor: pointer;
+    /*smooth transition of increasing "thumb" height when hovered*/
+    -webkit-transition: .2s;
+    transition: height .2s;
+}
+
+.slider::-webkit-slider-thumb:hover {
+    height: 30px;
+}
